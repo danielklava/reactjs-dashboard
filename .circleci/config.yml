@@ -38,7 +38,7 @@ jobs:
 
 workflows :
   version : 2
-  build-and-deploy-on-hold: :
+  build-and-deploy-on-hold : 
     jobs :
       - build :
         filters :
