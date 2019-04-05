@@ -52,13 +52,13 @@ workflows :
       - deploy-development :
         requires :
           - build
-          filters : 
-            branches :
-              only : development
+        filters : 
+          branches :
+            only : development
       - deploy-prod :
         requires :
           - build
           - hold
-          filters : 
-            branches :
-              only : master
+        filters : 
+          branches :
+            only : master
