@@ -49,13 +49,13 @@ workflows :
       - hold :
         type : approval
         requires : build
-      -deploy-development :
+      - deploy-development :
         requires :
           - build
           filters : 
             branches :
               only : development
-      -deploy-prod :
+      - deploy-prod :
         requires :
           - build
           - hold
