@@ -1,0 +1,48 @@
+{
+  "name": "reactjs-dashboard",
+  "version": "1.0.0",
+  "description": "Proof of concept project for a simple dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot",
+    "build": "webpack --mode prodution",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielklava/reactjs-dashboard.git"
+  },
+  "keywords": [
+    "reactjs",
+    "dashboard"
+  ],
+  "author": "Daniel Klava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielklava/reactjs-dashboard/issues"
+  },
+  "homepage": "https://github.com/danielklava/reactjs-dashboard#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "@redux-offline/redux-offline": "^2.5.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
+  }
+}
