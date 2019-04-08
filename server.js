@@ -7,6 +7,6 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-var server = app.listen(process.env.PORT, '0.0.0.0', function() {
+var server = app.listen(process.env.port || '8080', '0.0.0.0', function() {
   console.log('listening on port ', server.address().port);
 });
