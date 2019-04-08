@@ -41,7 +41,7 @@ class Post extends React.Component {
                     this.props.articles.map(el => (
                         <ExpansionPanel key={el.id}>
                             <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                                <Typography title>{el.title}</Typography>
+                                <Typography>{el.title}</Typography>
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails>
                                 <Typography paragraph>

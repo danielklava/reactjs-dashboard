@@ -2,18 +2,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuidv1 from "uuid";
-import { addArticle, clearArticles } from "../actions/index";
+import { addArticle, clearArticles, postData } from "../actions/index";
 import { TextField, Button, Snackbar, SnackbarContent } from "@material-ui/core";
 import FormGroup from '@material-ui/core/FormGroup';
 
 const mapStateToProps = state => {
     return { msgFoundBadWord : state.mapStateToProps };
 }
-
+    
 function mapDispatchToProps(dispatch) {
     return {
         addArticle : article => dispatch(addArticle(article)),
-        clearArticles : () => dispatch(clearArticles())
+        clearArticles : () => dispatch(clearArticles()),
+        postData : () => dispatch(postData())
     };
 }
 
@@ -27,6 +28,7 @@ class ArticleForm extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.submitPOST = this.submitPOST.bind(this);
     }
 
     handleChange(event){
@@ -46,12 +48,23 @@ class ArticleForm extends React.Component {
         this.props.clearArticles();
     }
 
+    submitPOST(event){
+        event.preventDefault();
+
+        this.props.postData();
+    }
+
     render (){
         const { title, msgFoundBadWord } = this.state;
 
         return (
             <div>
-
+                <Button onClick={this.submitPOST}
+                    variant="contained"
+                    color="primary"
+                >
+                    POST
+                </Button>
                 <form onSubmit={this.handleSubmit}>
                     <FormGroup>
                         <TextField
