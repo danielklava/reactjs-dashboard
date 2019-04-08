@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "test": "cucumber-js",
     "publish-demo": "npm run build && gh-pages -d dist",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.js --progress"
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
   },
   "repository": {
     "type": "git",
