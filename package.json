@@ -4,11 +4,11 @@
   "description": "Proof of concept project for a simple dashboard",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot",
+    "start": "webpack-dev-server --mode development --hot", 
     "build": "webpack --mode production",
     "test": "cucumber-js",
-    "deploy": "gh-pages -d dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && gh-pages -d dist",
+    "heroku-postbuild": "webpack -p --config ./webpack.prod.js --progress"
   },
   "repository": {
     "type": "git",
