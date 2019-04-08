@@ -4,7 +4,7 @@
   "description": "Proof of concept project for a simple dashboard",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot", 
+    "start": "webpack-dev-server --port $PORT --host 0.0.0.0 --mode development --hot", 
     "build": "webpack --mode production",
     "test": "cucumber-js",
     "publish-demo": "npm run build && gh-pages -d dist",
