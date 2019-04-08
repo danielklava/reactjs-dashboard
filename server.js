@@ -1,11 +1,22 @@
 //Server.js file for Heroku deployment
 var path = require('path');
 var express = require('express');
-const PORT = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 
 var app = express();
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 app.use(express.static(path.join(__dirname, 'dist')));
 
-var server = app.listen(PORT, () => console.log(`Listening on ${ PORT }`)
+// set the home page route
+app.get('/', function(req, res) {
+
+  // ejs render automatically looks in the views folder
+  res.render('index');
+});
+
+var server = app.listen(port, 
+  () => console.log(`Listening on ${ PORT }`)
 );
