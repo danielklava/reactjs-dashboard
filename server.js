@@ -4,9 +4,10 @@ var express = require('express');
 var app = express();
 app.set('port', (process.env.PORT || 4000));
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/dist'));
+
 app.get('*', function response(req, res) {
-  res.render(path.join(__dirname, 'public/index.html'));
+  res.render(path.join(__dirname, 'dist/index.html'));
 });
 
 app.listen(app.get('port'), function onStart(err) {
