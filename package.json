@@ -4,7 +4,7 @@
   "description": "Proof of concept project for a simple dashboard",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --port $PORT --host 0.0.0.0 --mode development --hot", 
+    "start": "webpack-dev-server --mode development --hot",
     "build": "webpack --mode production",
     "test": "cucumber-js",
     "publish-demo": "npm run build && gh-pages -d dist",
@@ -37,7 +37,8 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "workbox-webpack-plugin": "^4.2.0"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.3",
