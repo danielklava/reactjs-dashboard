@@ -13,7 +13,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 function mapDispatchToProps(dispatch) {
     return {
-        getData: () => dispatch(getData())
+            getData: () => dispatch(getData())
     };
 }
 
